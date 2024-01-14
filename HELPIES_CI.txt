@@ -1,0 +1,117 @@
+Instances:
++ The CLASS is like a factory and the instances are the things that the factory produces
+
+class Point():
+	pass
+point1 = Point() #instance, looks like calling a fun()
+point2 = Point() # different form each other
+
+print(point1)	
+print(point1 == point2) .False #different Point Objects
+
+#we create a INSTANCE VARIABLE, lives inside an instance.:
+
+point1.x = 5 #created different instance variables.
+point2.x = 10 #they live inside the instance.
+
+
+#creating a METHOD: a method is like a function except it belongs to the class.
+...(class)
+   def getX(self):
+       return self.x
+...
+print(point1.getX())
+###################################################################################
+class Name():
+      def __init__():
+	...
+#__init__ = This initializer method, referred as a constructor  "dunderscoreinit" way of the programmer.
+#ITS AUTOMATICALLY CALLED AFTER A 'Name' class IS CREATED.
+##################################################################################
+import math
+
+class Point:
+    """ Point class for representing and manipulating x,y coordinates. """
+
+    def __init__(self, initX, initY):
+
+        self.x = initX
+        self.y = initY
+
+    def getX(self):
+        return self.x
+
+    def getY(self):
+        return self.y
+
+    def distanceFromOrigin(self):
+        return ((self.x ** 2) + (self.y ** 2)) ** 0.5
+
+    def distance(self, point2):
+        xdiff = point2.getX()-self.getX()
+        ydiff = point2.getY()-self.getY()
+
+        dist = math.sqrt(xdiff**2 + ydiff**2)
+        return dist
+
+p = Point(4,3)
+q = Point(0,0)
+print(p.distance(q))
+
+
+
+##########################################################################################
+CONVERTING OBJECTS INTO STRINGS:
+
+#'dunderstr' = __str__
+def __str__(self):
+	return obj
+#returns the value and not the object reference.
+######################################################################################
+##################################################################################
+SPECIAL DUNDERSCORE METHODS: theres more tho.
+
+def __add__(self, other):
+	return Point(self.x + other.x, self.y + other.y)
+def __sub__(self, other):
+	return Point(self.x - other.x, self.y - other.y)
+
+print(p1 + p2)
+print(p1 - p2)
+#################################################################################
+#################################################################################
+INHERITANCE = Classes that inherit from other classes
+#'parent class' or 'superclass'
+
+#super().method() 'invoking super class methods'
+############################################################################################
+###########################################################################################
+##########################################################################################
+#########################################################################################
+TEST CASE: requires for the program in a way that can be checked automatically.
+#auto graders, the tools ive been using (try/except)
+
+assert x==y 
+	#True, Nothing happens
+	#False, Runtime Error
+
+@distance between two points = sqrt((x1-x1)^2+(y2-y1)^2)
+
+###############################################################################################
+TRY/EXCEPT:
+#Types of errors:
+SyntaxError = python didnt understood '[a,b]'
+RuntimeErrors = couldnt do what we asked in the form of:
+    SematicError: 
+	Name Error... a not defined  
+	KeyError... 
+	IndexError... list doesnt have a third item
+	ZeroDivisionError... when deviding by 0
+	...
+	
+
+###########################################################################################
+Django = https://www.dj4e.com/
+
+
+
